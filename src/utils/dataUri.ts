@@ -1,4 +1,4 @@
-import { Parser as DataUriParser } from 'datauri/parser';
+const DataUriParser = require('datauri/parser');
 import * as path from 'path';
 
 export const getBuffer = (file: Express.Multer.File) => {
