@@ -8,17 +8,17 @@ dotenv.config();
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   
-  // Enable CORS
-  app.enableCors();
+  app.enableCors({
+    origin: process.env.CLIENT_URL, 
+    credentials: true, 
+  });
   
-  // Global validation pipe
   app.useGlobalPipes(new ValidationPipe({
     whitelist: true,
     forbidNonWhitelisted: true,
     transform: true,
   }));
-  
-  // Global prefix for API routes
+
   app.setGlobalPrefix('api');
   
   const PORT = process.env.PORT || 4000;
