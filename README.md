@@ -52,6 +52,7 @@ Redis_Password=129HxrADtiTIfDmx06RlzwXwXQ8n3a8z
 JWT_SEC=<Generate a secret key by running: `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"` and paste the output here>
 
 ---
+```
 ## 📦 How to Run
 
 1. **Clone the repository**
@@ -59,13 +60,20 @@ JWT_SEC=<Generate a secret key by running: `node -e "console.log(require('crypto
 ```bash
 git clone https://github.com/Diwwy20/Backend-Auth-System
 cd backend-auth-system
+```
 
 2. **Install dependencies**
+```bash
 npm install
+```
 
 3. **Create and configure the .env file**
+```bash
    - Copy the example above into a .env file in the project root
    - Make sure all environment variables are set correctly
+```
 
 4. **Run the development server**
+```bash
 npm run start:dev
+```
